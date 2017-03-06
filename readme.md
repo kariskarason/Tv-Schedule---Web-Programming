@@ -1,12 +1,12 @@
-Şağ sem şarf ağ gera:
+ÃaÃ° sem Ã¾arf aÃ° gera:
 
-gera npm install, eftir ağ mappa verkefnisins hefur veriğ valin.
+gera npm install, eftir aÃ° mappa verkefnisins hefur veriÃ° valin.
 
-Gera database sem heitir data á localhost, 
-fara í schedule.js og setja notandanafn og password í stağ postgres:postgres (notandanafn:password) í línu 14
-fara í routes.js og setja notandanafn og password í stağ postgres:postgres (notandanafn:password) í línu 15
+Gera database sem heitir data Ã¡ localhost, 
+fara Ã­ schedule.js og setja notandanafn og password Ã­ staÃ° postgres:postgres (notandanafn:password) Ã­ lÃ­nu 14
+fara Ã­ routes.js og setja notandanafn og password Ã­ staÃ° postgres:postgres (notandanafn:password) Ã­ lÃ­nu 15
 
-í data skal gera tvær töflur, showsTest og channelsTest, meğ eftirfarandi hætti:
+Ã­ data skal gera tvÃ¦r tÃ¶flur, showsTest og channelsTest, meÃ° eftirfarandi hÃ¦tti:
 
 CREATE TABLE channelsTest(
   	id serial primary key,
@@ -27,4 +27,3 @@ CREATE TABLE showsTest(
 date timestamp with time zone not null default current_timestamp
 );
 
-Ef şağ er eitthvağ vesen, endilega hafa samband í email: ksk12@hi.is, s: 847-4386
