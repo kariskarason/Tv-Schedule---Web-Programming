@@ -1,0 +1,440 @@
+@font-face {
+  font-family: PlayfairDisplay-Bold;
+  src: url('fonts/PlayfairDisplay-Bold.otf');
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Light;
+  src: url('fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('fonts/Poppins-Medium.ttf');
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+.title {
+  padding-top: 100px;
+  padding-bottom: 4%;
+  color: #404040;
+  font-family: PlayfairDisplay-Bold;
+  font-size: 4em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-family: Poppins-Medium;
+  text-align: center;
+}
+
+a {
+  color: #191919;
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+}
+
+a:focus {
+   text-decoration:none;
+   border: none;
+   outline:0;
+}
+
+/*#umOkkur {
+  padding: 0;
+}*/
+
+/*table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 0px auto;
+}
+
+table,
+td {
+  border: 1px solid black;
+  text-align: left;
+}*/
+
+.allirPanelar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(white, #e5e5e5);
+}
+
+.einkunnThattar {
+  font-family: Poppins-Medium;
+  text-align: center;
+}
+
+.cardTakki {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-family: Poppins-Medium;
+}
+
+.cardTakki:hover {
+  background-color: #e5e5e5;
+  font-weight: bold;
+}
+
+.umThatt {
+  margin: 0 0 10px;
+  text-align: justify;
+  font-family: Poppins-Light;
+}
+
+.lengdThattar {
+  margin: 0 0 10px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: justify;
+  font-family: Poppins-Light;
+}
+
+.ummæliDags {
+  margin: 0 0 10px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: justify;
+}
+
+.commentDags {
+  display: flex;
+  justify-content: center;
+  font-family: Poppins-Light;
+}
+
+.inniUppl {
+  width: 80%;
+}
+
+.takkiUppl {
+  width: 100%;
+  text-decoration: none;
+}
+
+.takkiUppl .takkiUppl:visited {
+  text-decoration: none;
+}
+
+.takkiUppl:hover {
+  text-decoration: none;
+  text-decoration: underline;
+  color: #000;
+}
+
+.takkiUppl:active {
+  text-decoration: underline;
+}
+
+.panel-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-family: Poppins-Medium;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-inline {
+  font-family: Poppins-Medium;
+  width: 100%;
+}
+
+/*tr:nth-child(even) {
+  background-color: #e5e5e5;
+}
+
+td:hover {
+  background-color: #73c8a9;
+}*/
+
+.form-control {
+  width: 100%;
+}
+
+.logoTakki {
+  background-image: url("../images/logo.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+}
+
+.logoTakki:hover {
+  background-color: #bfbfbf;
+}
+
+.logoTakkiLink {
+  display: block;
+}
+
+.stodvarTakkar {
+  background-color: #bfbfbf;
+  color: #ff917f;
+  font-family: poppins-Medium, sans-serif;
+  border: 1px solid #bfbfbf;
+  cursor: pointer;
+}
+
+.stodvarTakkar:hover {
+  color: #fff;
+  background-color: #7f7f7f;
+}
+
+.navbar {
+  background-color: #bfbfbf;
+  padding-left: 2%;
+  font-family: Poppins-Medium;
+  font-weight: bold;
+}
+
+.butt-stod {
+  color: #404040;
+}
+
+.butt-stod:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.allirpan {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 65%;
+}
+
+.panel-default > .panel-heading {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.footer {
+  background-color: #404040;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 60px;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.footer > P {
+  color: #fff;
+  text-decoration: none;
+  width: 260px;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #bfbfbf;
+  text-decoration: none;
+}
+
+.button {
+  background-color: transparent;
+  color: #404040;
+  font-size: 16px;
+  border: 1px solid #404040;
+  width: 250px;
+  height: 52px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.button:hover {
+  color: white;
+  border: 3px solid #404040;
+  background-color: #7f7f7f;
+}
+
+#buttonAboutUs {
+  border: 1px solid #bfbfbf;
+  color: #7f7f7f;
+  background-color: transparent;
+  font-size: 16px;
+  width: 250px;
+  height: 52px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#buttonAboutUs:hover {
+  color: white;
+  border: 3px solid #bfbfbf;
+}
+
+#buttonForsida {
+  border: 1px solid #bfbfbf;
+  color: #7f7f7f;
+  background-color: transparent;
+  font-size: 16px;
+  width: 250px;
+  height: 52px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#buttonForsida:hover {
+  color: white;
+  border: 3px solid #bfbfbf;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.textiNafn {
+  width: 100%;
+  padding: 2%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.textiUmmæli {
+  width: 100%;
+  padding: 2%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.divSenda {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+.divStjornur {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#textiTakki {
+  display: none;
+}
+
+#footerError {
+  bottom: 0px;
+  width: 100%;
+  position: fixed;
+}
+
+textarea {
+  resize: none;
+}
+
+@media only screen and (max-width: 766px) {
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #textiTakki {
+    display: block;
+  }
+
+  .stodvarTakkar {
+    width: 30%;
+  }
+
+  .logoTakki {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+  }
+
+  #buttonAboutUs {
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
+  #buttonForsida {
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
+  .allirpan {
+    width: 95%;
+  }
+
+  .footer > P {
+    text-align: center;
+  }
+
+  .divStjornur {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stj1,
+  .stj2,
+  .stj3 {
+    width: 30%;
+  }
+
+  .stj4,
+  .stj5 {
+    width: 40%;
+  }
+
+@media only screen and (max-width: 500px) {
+  #textiTakki {
+    display: block;
+  }
+
+  .stodvarTakkar {
+    width: 40%;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .einkunnThattar {
+    padding-top: 6.2%;
+    padding-left: 1%;
+  }
+
+  .footer > P {
+    text-align: center;
+  }
+}

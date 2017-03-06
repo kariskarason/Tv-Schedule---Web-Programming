@@ -1,0 +1,98 @@
+doctype html
+html(lang="is")
+  head
+    title= "Sjónvarpsdagskrá íslenskra sjónvarpsstöðva"
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel="icon" href="/images/logo.jpg")
+    meta(name="viewport" charset="UTF-8" content="width=device-width inital-scale=1.0")
+
+  body
+    script(src="https://code.jquery.com/jquery-3.1.1.js", type='text/javascript')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer, type='text/javascript')
+
+    block content
+
+      div(class="page-header")
+        img(src='../images/logo.jpg' alt='TheThreeWebsketeers Logo' class='imglogo')
+        h1(class="title")= title
+
+      div(class="listiStodvar")
+        if(typeof channelsList !== 'undefined')
+          each channel, index in channelsList
+            div(class="stod")
+              if(channel.name !== 'undefined')
+                div
+                  h2(class="valstodvar"): a(href='' + channel.endpoint name = index+1)= channel.name
+                div(class="ummæli")
+                  - var n = -1;
+                  each grade in channelGrades
+                    if(grade.channel !== 'undefined' && grade.channel === channel.name)
+                      p(class="einkunnstod")="Einkunn: " + grade.grade
+                      - n = index;
+                  if(n !== index)
+                    p(class="einkunnstod")="Engin einkunn"
+
+                  div(class="btn-group" data-toggle="buttons")
+                    a(class="button collapse-data-btn tafla" data-toggle="collapse" href="#s" +index)= "Skrifa ummæli"
+                  div(class="btn-group" data-toggle="buttons")
+                    a(class="button collapse-data-btn tafla" data-toggle="collapse" href="#u" +index)= "Ummæli"
+            div(id="s"+index class="collapse")
+              form(class='form-inline reply-form' method="post" action="/#" + index)
+                div(class='form-group')
+                  div(class="divnafn")
+                    input(type="text" class="textiNafn" name="name" placeholder="Nafn")
+                  div(class="divumsogn")
+                    textarea(class='textiUmmæli' name='comment' placeholder='Umsögn' rows="5")
+
+                  div(class='divStjornur btn-group' data-toggle='buttons')
+                    label(class="btn btn-default")
+                      input(class="stjarna" type='radio' name='options' value="1")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                    label(class="btn btn-default")
+                      input(type='radio' name='options' value="2")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                    label(class="btn btn-default active")
+                      input(type='radio' name='options' value="3" checked)
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                    label(class="btn btn-default")
+                      input(type='radio' name='options' value="4")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                    label(class="btn btn-default")
+                      input(type='radio' name='options' value="5")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+                      span(class="glyphicon glyphicon-star" aria-hidden="true")
+
+                div(class="divSenda")
+                  button(type='submit' class='btn btn-default' name="channel" value= channel.name)= "Senda"
+
+            div(id="u"+index class="collapse")
+              form(class='form-inline')
+                - var s = -1;
+                each comment in comments
+                  if(comment.comment !== 'undefined' && comment.channel === channel.name)
+                    if(s !== index)
+                      h4(class="ummaeli")= "Ummæli um stöðina"
+                      - s = index;
+                    div(class="panel panel-default")
+                      div(class="panel-body")
+                        p(class="ummæliStöð")= comment.name + " segir: " + comment.comment + " - Einkunn: " + comment.grade
+                        p(class="ummæliStöð")= comment.timestamp
+                if(s !== index)
+                  h4(class="ummaeli")= "Engin ummæli komin fyrir þessa stöð"
+
+    div(class='footer')
+      p= "The Three Websketeers"
+      form
+        button.btn.btn-default(class="button footerButton" id="buttonForsida" formaction="/")= "Á forsíðu"
+      form
+        button.btn.btn-default(class="button footerButton" id="buttonAboutUs" formaction="/aboutus")= "Um okkur"

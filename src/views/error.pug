@@ -1,0 +1,20 @@
+doctype html
+html(lang="is")
+  head
+    title= "Villuskilaboða síða"
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/dagskra.css')
+    link(rel="icon" href="/images/logo.jpg")
+    meta(name="viewport" content="width=device-width inital-scale=1.0" charset="utf8")
+
+  body
+    block content
+      h1= message
+      button.btn.btn-default(class="forsidaTakki"): a(href='/')= "Aftur á forsíðu"
+
+      div(class='footer' id="footerError")
+        p(class="footerP" ) The Three Websketeers
+        form
+          button.btn.btn-default(class="button footerButton" id="buttonForsida" formaction="/")= "Á forsíðu"
+        form
+          button.btn.btn-default(class="button footerButton" id="buttonAboutUs" formaction="/aboutus")= "Um okkur"
